@@ -74,6 +74,7 @@ def homepage(Firstname):
             progressed = True
             foodbank()
 
+        #allowing the user to quit the app#
         elif select_section == "3":
             print("Closing the app, thanks for using Bank-Prep!")
             progressed = True
@@ -84,7 +85,33 @@ def homepage(Firstname):
             select_section = input("Please enter which section you want to go to, press 1 for meal prep, press 2 for foodbank loactor, press 3 to close the app")
 
 def meal_prep():
+    ingredients = []
+    amount_of_ingredients = int(input("How many ingredients do you have?"))
 
+    for i in range(0, (amount_of_ingredients)):
+           user_ingredient = input("Enter an ingredient you have")
+           ingredients.append(user_ingredient)
+
+
+
+def foodbank():
+    user_purpose = input("Do you want to donate or use a foodbank? Press 1 for donation, press 2 for use of foodbank")
+    foodbank_locations = ['SR4 6EX', 'SR1 1UN', 'NE6 3DP', 'DH2 1AG', 'SR3 4JQ']
+    user_location = input("Enter your Postcode to find your local ")
+
+
+
+
+
+    if user_purpose == "1":
+        donation_list = []
+        donations_amount = int(input("How many donations do you have?"))
+
+        for i in range(0,donations_amount):
+            donation = input("Enter your donation")
+            donation_list.append(donation)
+
+        print(f"Thank you for donating, your local foodbank {foodbank} is waiting for your donations of {donation_list} and is very appreciative!")
 
 
 
